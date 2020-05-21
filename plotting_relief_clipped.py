@@ -16,7 +16,7 @@ latmin, latmax = 21.5,25.5
 
 
 fig, ax = plt.subplots(figsize=(10,10))
-map = Basemap(projection='merc',resolution = 'l', area_thresh = 10000., llcrnrlon=lonmin, llcrnrlat=latmin,urcrnrlon=lonmax, urcrnrlat=latmax)
+map = Basemap(projection='merc',resolution = 'f', area_thresh = 10000., llcrnrlon=lonmin, llcrnrlat=latmin,urcrnrlon=lonmax, urcrnrlat=latmax)
 f = netCDF4.Dataset(etopo_file)
 try:
     lons = f.variables['lon'][:]
@@ -76,5 +76,5 @@ patch = PathPatch(path,facecolor='lightblue', edgecolor='none',zorder=4)
 ax.add_patch(patch)
 
 
-plt.savefig('station_map_masked.png',bbox_inches='tight',dpi=300)
+plt.savefig('station_map_masked.png',bbox_inches='tight',dpi=100)
 plt.close('all')

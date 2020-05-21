@@ -72,5 +72,5 @@ patch = PathPatch(path,facecolor='white', edgecolor='none',zorder=4)
 ax.add_patch(patch)
 
 
-plt.savefig('station_map_masked_reverse.png',bbox_inches='tight',dpi=300)
+plt.savefig('station_map_masked_reverse.png',bbox_inches='tight',dpi=100)
 plt.close('all')
